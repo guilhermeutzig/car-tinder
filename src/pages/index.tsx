@@ -13,11 +13,14 @@ const Home: NextPage = () => {
   const secondPokemon = trpc.useQuery(["get-pokemon-by-id", { id: second }]);
   const isLoading = firstPokemon.isLoading || secondPokemon.isLoading;
 
+  const voteMutation = trpc.useMutation(["cast-vote"]);
+
   if (isLoading) return <div>Loading...</div>;
 
   const voteForRoundest = (selected: number) => {
-    // todo: fire mutation to persist changes
-
+    const votedFor = selected === first ? first : second;
+    const votedAgainst = selected === first ? second : first;
+    voteMutation.mutate({ votedFor, votedAgainst });
     setIds(getOptionsForVote());
   };
 
