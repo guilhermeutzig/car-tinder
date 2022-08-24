@@ -1,1 +1,5 @@
-# car-tinder
+- NextJS
+- Tailwind
+- Typescript
+- Prisma
+- Etc
