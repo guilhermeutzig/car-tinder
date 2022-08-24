@@ -33,7 +33,7 @@ pscale connect roundest-pokemon main --port 3309
 ```
 
 ```sh
-pscale connect roundest-pokemon shadow --port 3309
+pscale connect roundest-pokemon shadow --port 3310
 ```
 
 After you successfully connected to PlanetScale, you can start to run the project. Run in the root directory:
