@@ -9,6 +9,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 - NextJS
 - Tailwind
 - Typescript
+- tRPC
 - Prisma
 - PlanetScale
 
@@ -57,3 +58,9 @@ yarn prisma studio
 
 This app is inside Vercel so all you need to do is push the changes for the deploy to start. It'll be displayed here:
 https://utzigui-roundest-pokemon.vercel.app/
+
+### To Do
+
+- Cache images with `next/image`
+- Persist data fetched from PokemonAPI
+- Create results page
