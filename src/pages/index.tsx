@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 
+import Loading from "@/components/Loading";
 import PokemonListing from "@/components/PokemonListing";
 import { getOptionsForVote } from "@/utils/getRandomCar";
 import { trpc } from "@/utils/trpc";
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
 
   const voteMutation = trpc.useMutation(["cast-vote"]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
 
   const voteForRoundest = (selected: number) => {
     const votedFor = selected === first ? first : second;

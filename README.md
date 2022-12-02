@@ -39,13 +39,7 @@ pscale connect roundest-pokemon shadow --port 3310
 After you successfully connected to PlanetScale, you can start to run the project. Run in the root directory:
 
 ```sh
-yarn
-```
-
-After installation is succeeded, you can run the project with:
-
-```sh
-yarn dev
+yarn && yarn dev
 ```
 
 If you want to see the mutations or manipulate the data in a UI, you can use Prisma Studio by running:
