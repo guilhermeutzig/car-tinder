@@ -5,6 +5,7 @@ import Loading from "@/components/Loading";
 import PokemonListing from "@/components/PokemonListing";
 import { getOptionsForVote } from "@/utils/getRandomCar";
 import { trpc } from "@/utils/trpc";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const [ids, setIds] = useState(getOptionsForVote());
@@ -39,6 +40,14 @@ const Home: NextPage = () => {
           pokemon={secondPokemon.data}
           vote={() => voteForRoundest(second)}
         />
+      </div>
+      <div className="absolute bottom-0 w-full text-xl text-center pb-2">
+        <a
+          href="https://github.com/guilhermeutzig/roundest-pokemon"
+          target="__blank"
+        >
+          Github
+        </a>
       </div>
     </div>
   );
