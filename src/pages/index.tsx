@@ -3,9 +3,8 @@ import type { NextPage } from "next";
 
 import Loading from "@/components/Loading";
 import PokemonListing from "@/components/PokemonListing";
-import { getOptionsForVote } from "@/utils/getRandomCar";
+import { getOptionsForVote } from "@/utils/getRandomPokemon";
 import { trpc } from "@/utils/trpc";
-import Link from "next/link";
 
 const Home: NextPage = () => {
   const [ids, setIds] = useState(getOptionsForVote());
