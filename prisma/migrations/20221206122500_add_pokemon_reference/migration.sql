@@ -10,8 +10,8 @@
 -- AlterTable
 ALTER TABLE `Vote` DROP COLUMN `votedAgainst`,
     DROP COLUMN `votedFor`,
-    ADD COLUMN `votedAgainstId` INTEGER NOT NULL,
-    ADD COLUMN `votedForId` INTEGER NOT NULL;
+    ADD COLUMN `votedAgainstId` INTEGER,
+    ADD COLUMN `votedForId` INTEGER;
 
 -- CreateTable
 CREATE TABLE `Pokemon` (
