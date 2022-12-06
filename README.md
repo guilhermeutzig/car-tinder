@@ -58,3 +58,22 @@ https://utzigui-roundest-pokemon.vercel.app/
 - Cache images with `next/image`
 - Persist data fetched from PokemonAPI
 - Create results page
+
+### Problems
+
+Can't run `npx prisma migrate dev` or any Prisma command really because of this error:
+
+```
+direct DDL is disabled
+   0: sql_migration_connector::best_effort_reset
+           with namespaces=None
+             at migration-engine\connectors\sql-migration-connector\src\lib.rs:326
+   1: migration_core::state::Reset
+             at migration-engine\core\src\state.rs:373
+```
+
+Issue: https://github.com/prisma/prisma/issues/7292#issue-903064726
+
+It mentions that PlanetScale doesn't allow schema changes directly on Production branches, but even running `pscale branch switch shadow --database roundest-pokemon` to switch to `shadow` branch it doesn't work, it still returns the same error.
+
+Still don't know what to do since creating more branches is part of a paid plan.
